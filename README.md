@@ -5,7 +5,7 @@
 </p>
 
 ---
-<img width="480px" height="100px" src="https://github.com/nejlasahin/gomulu_sistemler/blob/main/odev_1/circuit-design/odev1.png" align="center" alt="GitHub Readme" />
+<img width="100px" height="480px" src="https://github.com/nejlasahin/gomulu_sistemler/blob/main/odev_1/circuit-design/odev1.png" align="center" alt="GitHub Readme" />
 ### ÖDEV 1 - 5 adet LED'i butonlarla 3 farklı şekilde yakmak.
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/2Bv68uwMsGA)
 
