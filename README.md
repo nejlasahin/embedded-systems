@@ -5,7 +5,7 @@
 </p>
 
 ---
-
+![](./odev_1/circuit-design/odev1.png)
 ### ÖDEV 1 - 5 adet LED'i butonlarla 3 farklı şekilde yakmak.
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/2Bv68uwMsGA)
 
