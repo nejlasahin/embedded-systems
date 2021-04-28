@@ -36,5 +36,5 @@
 
 ---
 ![](./odev_4/circuit-design/odev4.png)
-### ÖDEV 4 - 2 Arduino kullanarak seri haberleşme gerçekleştirmek ve keypad ile sensörlere atanan değere göre motor ile tepki vermek.
+### ÖDEV 4 - 2 Arduino kullanarak seri haberleşme gerçekleştirmek ve keypad ile sensörlere atanan değere göre motor ile tepki oluşturmak.
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/1LL5ltj1nSQ)
