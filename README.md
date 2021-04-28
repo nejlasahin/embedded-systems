@@ -5,7 +5,7 @@
 </p>
 
 ---
-# ÖDEV 1 - 5 adet LED kullanarak butonlar yardımıyla 3 farklı şekilde yakmak
+### ÖDEV 1 - 5 adet LED kullanarak butonlar yardımıyla 3 farklı şekilde yakmak
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/2Bv68uwMsGA)
 
 ---
