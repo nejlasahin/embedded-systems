@@ -19,14 +19,17 @@
 ### ÖDEV 3.1 - Ortam karanlık olduğunda yanan gece lambası.
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/1VxzkJ0X3Xy)
 
+---
 ![](./odev_3/circuit-design/odev3.2.png)
 ### ÖDEV 3.2 - Park sensörü.
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/2nonT9hfrXY)
 
+---
 ![](./odev_3/circuit-design/odev3.3.png)
 ### ÖDEV 3.3 - Sıcaklık değerine göre uyarı veren sistem.
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/lmTA46y3VdH)
 
+---
 ![](./odev_3/circuit-design/odev3.4.png)
 ### ÖDEV 3.4 - Güvenlik uygulaması.
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/jB9YJtYYfDs)
