@@ -38,3 +38,18 @@
 ![](./odev_4/circuit-design/odev4.png)
 ### ÖDEV 4 - 2 Arduino kullanarak seri haberleşme gerçekleştirmek ve keypad ile sensörlere atanan değere göre motor ile tepki oluşturmak.
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/1LL5ltj1nSQ)
+
+---
+![](./odev_5/circuit-design/odev5.1-UART.png)
+### ÖDEV 5.1 - 2 Arduino arasında UART Haberleşme Protokolünü gerçekleştirmek.
+[Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/1lzECLQex5D)
+
+---
+![](./odev_5/circuit-design/odev5.2-I2C.png)
+### ÖDEV 5.2 - 2 Arduino arasında I2C Haberleşme Protokolünü gerçekleştirmek.
+[Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/086rEkfoqCF)
+
+---
+![](./odev_5/circuit-design/odev5.3-SPI.png)
+### ÖDEV 5.3 - 2 Arduino arasında SPI Haberleşme Protokolünü gerçekleştirmek.
+[Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/6L13HKU74am)
