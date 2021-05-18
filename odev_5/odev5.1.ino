@@ -1,31 +1,59 @@
-#include <LiquidCrystal.h> 
+/////////////////////////////
+///////// ARDUİNO 1 /////////
+/////////////////////////////
 
-LiquidCrystal lcd(12,11,10,9,8,7); 
-int deger;
-int led = 13;
+int hiz = A0; 
+int hizDevir; 
+int hizDeger;
+
+int yon = A1;
+int yonDevir;
+int yonDeger;
 
 void setup() {
-  pinMode(led,OUTPUT);
-  lcd.begin(16,2); //Satır ve sütunların sayısı 
-  				   //lcd.begin (sütunlar, satırlar) olarak belirtilir.
+    Serial.begin(9600); // UART işlemi 
+}
+void loop() {
+  
+  
+  
+  hizDevir = analogRead(hiz);
+  hizDeger=map(hizDevir, 1023, 0, 0, 255);
+  delay(200);
+  Serial.write(hizDeger);
+     
+  yonDevir = analogRead(yon);
+  yonDeger=map(yonDevir, 1023, 0, 0, 180);
+  delay(200);
+  Serial.write(yonDeger);
 }
 
+/////////////////////////////
+///////// ARDUİNO 2 /////////
+/////////////////////////////
+
+int hiz = A0; 
+int hizDevir; 
+int hizDeger;
+
+int yon = A1;
+int yonDevir;
+int yonDeger;
+
+void setup() {
+    Serial.begin(9600); // UART işlemi 
+}
 void loop() {
- 
-  deger = analogRead(A0);
-  if(deger <= 900){
-    lcd.setCursor(0,0);  
-    lcd.print("Ortam Karanlik"); 
-    lcd.setCursor(0,1);  
-    lcd.print("Isik acik"); 
-    digitalWrite(led, 1);
-  }else if(deger > 900){
-    lcd.setCursor(0,0);  
-    lcd.print("Ortam Aydinlik"); 
-    lcd.setCursor(0,1);  
-    lcd.print("Isik kapali"); 
-    digitalWrite(led, 0);
-  }
-  delay(500);
-  lcd.clear();
+  
+  
+  
+  hizDevir = analogRead(hiz);
+  hizDeger=map(hizDevir, 1023, 0, 0, 255);
+  delay(200);
+  Serial.write(hizDeger);
+     
+  yonDevir = analogRead(yon);
+  yonDeger=map(yonDevir, 1023, 0, 0, 180);
+  delay(200);
+  Serial.write(yonDeger);
 }
