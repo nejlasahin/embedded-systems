@@ -53,3 +53,8 @@
 ![](./odev_5/circuit-design/odev5.3-SPI.png)
 ### ÖDEV 5.3 - 2 Arduino arasında SPI Haberleşme Protokolünü gerçekleştirmek.
 [Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/6L13HKU74am)
+
+---
+![](./odev_6/circuit-design/odev6.png)
+### ÖDEV 6 - Arduino ile Interrupt kullanımı.
+[Tinkercad üzerinden uygulamaya erişmek için tıklayınız.](https://www.tinkercad.com/things/bMrVa27EZGm)
