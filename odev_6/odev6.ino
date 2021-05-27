@@ -2,58 +2,124 @@
 ///////// ARDUİNO 1 /////////
 /////////////////////////////
 
-int hiz = A0; 
-int hizDevir; 
-int hizDeger;
+#include <LiquidCrystal.h> 
 
-int yon = A1;
-int yonDevir;
-int yonDeger;
+LiquidCrystal lcd(13, 12, 11, 10, 9, 8); 
 
-void setup() {
-    Serial.begin(9600); // UART işlemi 
+int sistemButon = 3;
+int sensorButon = 2;
+
+int girisLed = 7;
+
+bool sistemDurum = false;
+bool sensorDurum = true;
+
+int sensorInterrupt = 1;
+int sistemInterrupt = 0;
+
+void setup()
+{
+  lcd.begin(16,2);
+  pinMode(sistemButon, INPUT);
+  pinMode(sensorButon, INPUT);
+  pinMode(girisLed, OUTPUT);
+  Serial.begin(9600);
+  attachInterrupt(digitalPinToInterrupt(sistemButon), sistemKontrol, FALLING);
+  attachInterrupt(digitalPinToInterrupt(sensorButon), sensorKontrol, FALLING);
 }
-void loop() {
+
+void loop()
+{
+  if(Serial.available()){
+  sensorInterrupt = Serial.read();
+  sensorDurum = false;
+  }
+  lcd.clear();
+  if(!sistemDurum){
+    lcd.setCursor(0, 0);
+  	lcd.print("Sistemi Aktif");
+    lcd.setCursor(0, 1);
+    lcd.print("Ediniz.");
+    delay(100);
+  }else{
+    if(sensorDurum==false){
+  		lcd.setCursor(0, 0);
+  		lcd.print("Tehlike !");
+    	delay(100);
+    }else {
+      	lcd.setCursor(0, 0);
+  		lcd.print("Tehlike Yok.");
+    	delay(100);
+    }
+  }
+}
+
+
+void sensorKontrol(){
   
+  sensorDurum = true;
+  Serial.write(sensorInterrupt);
   
-  
-  hizDevir = analogRead(hiz);
-  hizDeger=map(hizDevir, 1023, 0, 0, 255);
-  delay(200);
-  Serial.write(hizDeger);
-     
-  yonDevir = analogRead(yon);
-  yonDeger=map(yonDevir, 1023, 0, 0, 180);
-  delay(200);
-  Serial.write(yonDeger);
+}
+
+void sistemKontrol(){
+	sistemDurum = true;
+  	Serial.write(sistemInterrupt);
+  	digitalWrite(girisLed, HIGH);
+    lcd.clear();
+  	lcd.setCursor(0, 0);
+  	lcd.print("Sistemi Giris");
+    lcd.setCursor(0, 1);
+    lcd.print("Yapildi.");
 }
 
 /////////////////////////////
 ///////// ARDUİNO 2 /////////
 /////////////////////////////
 
-int hiz = A0; 
-int hizDevir; 
-int hizDeger;
+int sensor =3;
+int girisLed = 13;
+int buzzer = 12;
 
-int yon = A1;
-int yonDevir;
-int yonDeger;
+bool sistemDurum = false;
+bool sensorDurum = true;
 
-void setup() {
-    Serial.begin(9600); // UART işlemi 
+int sistemInterrupt;
+int sensorInterrupt;
+
+void setup()
+{
+  pinMode(sensor, INPUT);
+  pinMode(buzzer, OUTPUT);
+  pinMode(girisLed, OUTPUT);
+  attachInterrupt(digitalPinToInterrupt(sensor),sensorKontrol,RISING);
+  Serial.begin(9600);
 }
-void loop() {
+
+void loop()
+{
+  if(sistemDurum==false){
+    while(!Serial.available());
+  	sistemInterrupt = Serial.read();
+	sistemDurum = true;
+    digitalWrite(girisLed, HIGH);
+  }else{
+    if(sensorDurum==false){
+       tone(buzzer, 15);
+       delay(200);
+  	   while(!Serial.available());
+       sensorInterrupt = Serial.read();
+       sensorDurum = true;
+    }else{
+       noTone(buzzer);
+       delay(200);
+    }
+  }
   
-  
-  
-  hizDevir = analogRead(hiz);
-  hizDeger=map(hizDevir, 1023, 0, 0, 255);
-  delay(200);
-  Serial.write(hizDeger);
-     
-  yonDevir = analogRead(yon);
-  yonDeger=map(yonDevir, 1023, 0, 0, 180);
-  delay(200);
-  Serial.write(yonDeger);
+
+}
+
+void sensorKontrol(){
+  sensorDurum = false;
+  Serial.write(sensorDurum);
 }
